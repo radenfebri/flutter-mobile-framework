@@ -1,16 +1,20 @@
 import 'dart:io';
 
 void main() {
+  // Meminta pengguna memasukkan tanggal (1-31)
   stdout.write("Masukkan tanggal (1-31): ");
   int day = int.parse(stdin.readLineSync()!);
 
+// Meminta pengguna memasukkan bulan (1-12)
   stdout.write("Masukkan bulan (1-12): ");
   int month = int.parse(stdin.readLineSync()!);
 
+// Meminta pengguna memasukkan tahun
   stdout.write("Masukkan tahun: ");
   int year = int.parse(stdin.readLineSync()!);
   String monthName = "";
 
+// Menggunakan struktur switch case untuk mengubah nomor bulan menjadi nama bulan
   switch (month) {
     case 1:
       monthName = "Januari";
@@ -52,6 +56,9 @@ void main() {
       monthName = "Bulan tidak valid";
   }
 
+// Menggabungkan tanggal, nama bulan, dan tahun dalam satu string
   String formattedDate = "$day $monthName $year";
+
+  // Mencetak tanggal yang telah diformat
   print(formattedDate);
 }
